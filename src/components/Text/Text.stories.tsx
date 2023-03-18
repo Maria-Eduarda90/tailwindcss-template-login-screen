@@ -6,7 +6,16 @@ export default {
     title: 'Components/Text',
     component: Text,
     args: {
-        children: 'hello world'
+        children: 'hello world',
+        size: 'md',
+    },
+    argTypes: {
+        size: {
+            options: ['sm', 'md', 'lg'],
+            control: {
+                type: 'inline-radio',
+            }
+        }
     }
 } as Meta<TextProps>
 
@@ -30,5 +39,12 @@ export const CustomComponent: StoryObj<TextProps> = {
         children: (
             <p>Hello</p>
         )
+    },
+    argTypes: {
+        children: {
+            control: {
+                type: null,
+            }
+        }
     }
 }
