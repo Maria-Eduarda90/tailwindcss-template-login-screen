@@ -8,7 +8,7 @@ export function Button({ children, asChild }: ButtonProps){
     return(
         <Component
             className={clsx(
-                "py-4 px-3 bg-purple-700 rounded font-semibold text-black text-sm w-full hover:bg-purple-600",
+                "py-4 px-3 bg-purple-700 rounded font-sans text-gray-100 text-sm w-full hover:bg-purple-600",
             )}
         >
             {children}
