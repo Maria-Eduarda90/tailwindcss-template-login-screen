@@ -2,7 +2,7 @@ import { Slot } from '@radix-ui/react-slot';
 import { clsx } from 'clsx';
 import { TextProps } from '../../@types/TextProps';
 
-export function Text({ size = "md", children, asChild }: TextProps){
+export function Text({ size = "md", children, asChild, className }: TextProps){
     const Component = asChild ? Slot : 'span';
 
     return(
@@ -13,7 +13,8 @@ export function Text({ size = "md", children, asChild }: TextProps){
                     'text-xs': size === 'sm',
                     'text-sm': size === 'md',
                     'text-md': size === 'lg',
-                }
+                },
+                className
             )}
         >
             {children}
